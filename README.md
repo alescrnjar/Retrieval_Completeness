@@ -7,7 +7,7 @@ Here, I present a custom retriever method and I show that it performs well on th
 The custom similarity search is based on the assumption that the number of retrieved chunks as a function of similarity threshold will follow a distribution such as the one in the figure, i.e.: a low number of documents will result similar to a query (similarity equal to or close to 1). When progressively reducing the similarity threshold, there will be a sudden "jump" in the number of retrieved documents (when the documents will stop being relevant for the query), followed by a plateau that gets to the total number of documents when they similarity approaches 0. The "jump"-threshold can then be captured, for example, through the Kneedle algorithm.
 
 <p align="center">
-<img width="500" src=https://github.com/alescrnjar/Retrieval_Completeness/src/Kneedle.png>
+<img width="500" src=https://github.com/alescrnjar/Retrieval_Completeness/blob/main/src/Kneedle.png>
 </p>
 
 An LLM-based reranking occurs at answer generation stage (which happens via Chain-of-Thought), since "I DO NOT KNOW" gets printed when the LLM is not able to generate an answer based on the context.
